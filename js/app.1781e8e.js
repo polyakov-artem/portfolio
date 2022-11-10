@@ -29591,89 +29591,6 @@ window.addEventListener('DOMContentLoaded', function () {
 
 
 
-;// CONCATENATED MODULE: ./dev-tools/blocks-outline/blocks-outline-style.js
-const style = `
-  body *:not(.dev-controls-block) {
-    outline-offset: -2px;
-    outline-style: dashed; 
-    outline-width: 2px; 
-  }
-  body > *:not(.dev-controls-block) {
-    outline-color: black; 
-  }
-  body > *:not(.dev-controls-block) > * {
-    outline-color: fuchsia; 
-  }
-  body > *:not(.dev-controls-block) > * > * {
-    outline-color: purple; 
-  }
-  body > *:not(.dev-controls-block) > * > * > * {
-    outline-color: red; 
-  }
-  body > *:not(.dev-controls-block) > * > * > * > * {
-    outline-color: maroon; 
-  }
-  body > *:not(.dev-controls-block) > * > * > * > * > * {
-    outline-color: #FF4500; 
-  }
-  body > *:not(.dev-controls-block) > * > * > * > * > * > * {
-    outline-color: olive; 
-  }
-  body > *:not(.dev-controls-block) > * > * > * > * > * > * > * {
-    outline-color: lime; 
-  }
-  body > *:not(.dev-controls-block) > * > * > * > * > * > * > * > * {
-    outline-color: aqua; 
-  }
-  body > *:not(.dev-controls-block) > * > * > * > * > * > * > * > * > * {
-    outline-color: teal; 
-  }
-  body > *:not(.dev-controls-block) > * > * > * > * > * > * > * > * > * > * {
-    outline-color: blue; 
-  }
-  body > *:not(.dev-controls-block) > * > * > * > * > * > * > * > * > * > * > * {
-    outline-color: navy; 
-  }
-  body > *:not(.dev-controls-block) > * > * > * > * > * > * > * > * > * > * > * > * {
-    outline-color: #4B0082; 
-  }`;
-/* harmony default export */ const blocks_outline_style = (style);
-;// CONCATENATED MODULE: ./dev-tools/blocks-outline/blocks-outline.js
-
-const VISIBILITY_KEY = 'outlineIsHidden';
-const blocksOutline = {
-  [VISIBILITY_KEY]: JSON.parse(localStorage.getItem(VISIBILITY_KEY)) ?? true,
-  init() {
-    this.createDomElements();
-    this.createStyle();
-    this.bindEvents();
-  },
-  createDomElements() {
-    const html = `<button class = "blocks-outline-btn" style="position: fixed; bottom: 50px; left:0; border: 1px solid; padding: 0 5px;")> Toggle outline </button>`;
-    const fragment = document.createRange().createContextualFragment(html);
-    document.querySelector('body').append(fragment);
-  },
-  createStyle() {
-    this.style = document.createElement('style');
-    this.style.appendChild(document.createTextNode(blocks_outline_style));
-    if (this[VISIBILITY_KEY]) this.style.setAttribute('media', "max-width: 1px");
-    document.head.append(this.style);
-  },
-  bindEvents() {
-    document.querySelector('.blocks-outline-btn').addEventListener('click', e => {
-      this.toggleOutline();
-    });
-  },
-  toggleOutline() {
-    this[VISIBILITY_KEY] = !this[VISIBILITY_KEY], localStorage.setItem(VISIBILITY_KEY, this[VISIBILITY_KEY]);
-    if (this.style.hasAttribute('media')) {
-      this.style.removeAttribute('media');
-    } else {
-      this.style.setAttribute('media', "max-width: 1px");
-    }
-  }
-};
-blocksOutline.init();
 ;// CONCATENATED MODULE: ./src/app.js
 // Common  Js
 
@@ -29684,8 +29601,7 @@ blocksOutline.init();
 // Pages
 
 // Dev-tools
-// import '~dev-tools/img-overlay/img-overlay'
-
+// import '~dev-tools/blocks-outline/blocks-outline'
 
 // SVG images
 js_importAll(__webpack_require__(788));
