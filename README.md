@@ -2,7 +2,7 @@
 
 Будет наполняться работами по мере разработки.
 
-Адрес сайта - [Портфолио](https://polyakov-artem.github.io/portfolio/index.html/)
+Адрес сайта - [Портфолио](https://polyakov-artem.github.io/portfolio/index.html)
 
 Основые инструменты:
 - WEBPACK
