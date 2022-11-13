@@ -1,0 +1,30 @@
+@use 'sass:math';
+@import '~scss/_vars';
+@import '~scss/utils/_grid';
+
+$gap: 20px;
+
+.projects {
+  &__wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-gap: $gap;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  @include media-up(md) {
+    &__wrap {
+      max-width: 800px;
+      grid-template-columns: repeat(2, calc((100% - $gap)/2));
+    }
+  }
+
+  @include media-up(lg) {
+    &__wrap {
+      max-width: 100%;
+      grid-template-columns: repeat(3, calc((100% - $gap)/3));
+    }
+  }
+}

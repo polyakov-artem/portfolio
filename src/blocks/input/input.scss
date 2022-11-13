@@ -1,0 +1,31 @@
+@use '~node-modules/sass-rem' as rem;
+@import '~scss/_vars';
+
+
+.input {
+  position: relative;
+  height: rem.convert(40px);
+  display: flex;
+
+  &__control {
+    flex: 1 1 0;
+    display: block;
+    line-height: 1;
+    border: 1px solid $dark_opacity_20;
+    border-radius: 4px;
+    padding: 0 15px;
+
+    &:hover,
+    &:focus {
+      border-color: $blue_opacity_50;
+    }
+
+    &:disabled {
+      cursor: default;
+    }
+
+    &:placeholder {
+      color: $dark_opacity_20;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@use '~node-modules/sass-rem' as rem;
+@import '~scss/_vars';
+
+
+.textarea{
+  height: rem.convert(200px);
+  width: 100%;
+  display: block;
+  border-radius: 4px;
+  padding: 10px;
+  border: 1px solid $dark_opacity_20;
+
+  &:hover,
+  &:focus {
+    border-color: $blue_opacity_50;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &:placeholder {
+    color: $dark_opacity_20;
+  }
+
+}

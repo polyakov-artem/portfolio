@@ -1,0 +1,25 @@
+@mixin font-face($font-name, $path, $weight: normal, $style: normal, $formats: ('woff2', 'woff')) {
+
+  @font-face {
+    $src:(local($font-name));
+    $ieSupport: index($formats, 'eot');
+
+    @if (index($formats, 'woff2')) {$src: append($src, url($path + '.woff2') format('woff2'), $separator: comma)};
+    @if (index($formats, 'woff')) {$src: append($src, url($path + '.woff') format('woff'), $separator: comma)}
+    @if (index($formats, 'ttf')) {$src: append($src, url($path + '.ttf') format('truetype'), $separator: comma)};
+    @if (index($formats, 'otf')) {$src: append($src, url($path + '.otf') format('otf'), $separator: comma)};
+    @if (index($formats, 'svg')) {$src: append($src, url($path + '.svg##{$font-name}') format('svg'), $separator: comma)};
+   
+    @if ($ieSupport) {
+      src: url($path + '.eot');
+      $src: append($src, url($path + '.eot?#iefix') format('embedded-opentype'))
+    };
+
+    font-family: quote($font-name);
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+    
+    src: $src;
+  }
+}

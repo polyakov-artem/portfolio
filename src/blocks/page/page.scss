@@ -1,0 +1,21 @@
+@use '~node-modules/sass-rem' as rem;
+@import '~scss/utils/_grid';
+@import '~scss/_vars';
+
+
+@keyframes bg-animation {
+  0% {
+   background-position:0 0
+  }
+  to {
+   background-position:100% 0
+  }
+ }
+
+.page {
+  background-image: url('../../assets/svgInline/bg.svg');
+  
+  @include media-up(sm){
+    animation: bg-animation 100s linear infinite alternate;
+  }
+}

@@ -1,0 +1,19 @@
+@import '~scss/_vars';
+
+.btn {
+  padding: 5px 20px;
+  display: inline-block;
+  color: $dark_opacity_75;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 1px solid $blue;
+  text-transform: uppercase;
+  box-shadow: 0 0 0px $blue;
+  transition: all 0.1s linear;
+  
+  &:focus,
+  &:hover{
+    color: $blue;
+    box-shadow: 0 0 5px $blue;
+  }
+}

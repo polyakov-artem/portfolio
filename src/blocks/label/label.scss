@@ -1,0 +1,16 @@
+@import '~scss/utils/_grid';
+@import '~scss/_vars';
+
+
+.label{
+  display: block;
+  &_required:after{
+    content: '*';
+    display: inline-block;
+    color: red;
+  }
+
+  &__block{
+    display: block;
+  }
+}

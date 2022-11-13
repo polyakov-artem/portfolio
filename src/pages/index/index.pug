@@ -1,0 +1,182 @@
+extends ../../common/pug/page-template
+
+block title
+  title Polyakov Artem
+
+block content
+  body.index
+    header.header
+      nav.header__navbar
+        .header__wrap
+          a.header__home-link(href='/')
+            svg.header__logo
+                use(xlink:href="#logo" )
+            span.header__logo-text Polyakov Artem
+          button.hamburger.hamburger_type_slider.header__toggler
+            span.hamburger__box
+              span.hamburger__inner
+
+        ul.header__menu
+          li.header__item
+            a.header__link(href='#skills') Навыки
+              svg.header__link-border
+                use(xlink:href="#rectangle" )
+          li.header__item
+            a.header__link(href='#projects') Проекты
+              svg.header__link-border
+                use(xlink:href="#rectangle" )
+          li.header__item
+            a.header__link(href='#contacts') Контакты
+              svg.header__link-border
+                use(xlink:href="#rectangle" )
+
+
+    main.index__main
+      section.intro.container
+        .intro__text-column
+          .intro__heading
+            h1.h1.intro__name Поляков Артем
+            .h3.intro__post Frontend - разработчик
+            p.intro__short Стремлюсь разрабатывать качественный поддерживаемый код, верстать perfect-pixel интерфейсы с использованием новейших технологий.
+          .intro__links
+            a.intro__link(href="mailto:Polyakov.Artem.V@yandex.ru?subject=Портфолио") 
+              svg.intro__link-icon
+                use(href='#mail')
+              span Polyakov.Artem.V@yandex.ru
+            a.intro__link(href='https://github.com/polyakov-artem') 
+              svg.intro__link-icon
+                use(href='#github')
+              span Github
+          a.btn.intro__btn(href='#contacts') Скачать резюме
+        .intro__img-column
+          svg.intro__img
+            use(href='#man')
+
+      section#skills.skills.index__section
+        .container
+          h2.h1.page-title Навыки и инструменты
+          .skills__wrap
+            .skills__column-one
+              svg.skills__img
+                use(href='#skill')
+            .skills__column-two
+              .skills__diagram
+                canvas.radar.skills__radar
+          ul.skills__list
+            li.tool.skills__item
+              svg.tool__img
+                use(href='#html')
+              p.tool__name HTML
+            li.tool.skills__item
+              svg.tool__img
+                use(href='#sass')
+              p.tool__name SASS
+            li.tool.skills__item
+              svg.tool__img
+                use(href='#github')
+              p.tool__name Github 
+            li.tool.skills__item
+              svg.tool__img
+                use(href='#js')
+              p.tool__name Javascript
+            li.tool.skills__item
+              svg.tool__img
+                use(href='#ts')
+              p.tool__name Typescript
+            li.tool.skills__item
+              svg.tool__img
+                use(href='#webpack')
+              p.tool__name Webpack
+            li.tool.skills__item
+              svg.tool__img
+                use(href='#node')
+              p.tool__name Node
+            li.tool.skills__item
+              svg.tool__img
+                use(href='#npm')
+              p.tool__name Npm
+            li.tool.skills__item
+              svg.tool__img
+                use(href='#react')
+              p.tool__name React
+            li.tool.skills__item
+              svg.tool__img
+                use(href='#redux')
+              p.tool__name Redux
+          
+      section#projects.projects.index__section
+        .container
+          h1.h1.page-title Проекты
+          .projects__wrap
+            article.project__card.card
+              .card__img-wrap
+                img.card__img(src=require('~assets/images/1.jpeg'))
+              .card__wrap
+                h4.h4.card__title Название проекта
+                p.card__description Описание проекта
+                footer.card__footer
+                  time.card__date(datetime="2022-03")
+                    svg.card__icon.card__icon_date
+                      use(href='#calendar') 
+                    span Март 2022
+                  a.card__link(href='#')
+                    svg.card__icon
+                      use(href='#link')
+                  a.card__link(href='#') 
+                    svg.card__icon
+                      use(href='#github')
+            article.project__card.card
+              .card__img-wrap
+                img.card__img(src=require('~assets/images/2.jpeg'))
+              .card__wrap
+                h4.h4.card__title Название проекта
+                p.card__description Описание проекта
+                footer.card__footer
+                  time.card__date(datetime="2022-03")
+                    svg.card__icon.card__icon_date
+                      use(href='#calendar') 
+                    span Март 2022
+                  a.card__link(href='#')
+                    svg.card__icon
+                      use(href='#link')
+                  a.card__link(href='#') 
+                    svg.card__icon
+                      use(href='#github')
+            article.project__card.card
+              .card__img-wrap
+                img.card__img(src=require('~assets/images/3.jpeg'))
+              .card__wrap
+                h4.h4.card__title Название проекта
+                p.card__description Описание проекта
+                footer.card__footer
+                  time.card__date(datetime="2022-03")
+                    svg.card__icon.card__icon_date
+                      use(href='#calendar') 
+                    span Март 2022
+                  a.card__link(href='#')
+                    svg.card__icon
+                      use(href='#link')
+                  a.card__link(href='#') 
+                    svg.card__icon
+                      use(href='#github')
+
+      section#contacts.contacts.index__section
+        .container
+          h2.h2.page-title Контакты
+          form.contact-form.contacts__form
+            p.contacts__text Можете связаться со мной через форму ниже или написав на Email 
+              a.contacts__link(href="mailto:Polyakov.Artem.V@yandex.ru?subject=Портфолио") Polyakov.Artem.V@yandex.ru.
+            .contact-form__field
+              label.label.label_required.contact-form__label Ваше имя:
+              .input
+                input.input__control(type='text')
+            .contact-form__field
+              label.label.label_required.contact-form__label Ваше Email:
+              .input
+                input.input__control(type='email')
+            .contact-form__field
+              label.label.label_required.contact-form__label Текст сообщения:
+              textarea.textarea
+            button.btn.contact-form__submit-btn Отправить
+          
+    script(src=require('~src/app.js'))

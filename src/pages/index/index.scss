@@ -1,0 +1,29 @@
+@use '~node-modules/sass-rem' as rem;
+@import '~scss/utils/_grid';
+@import '~scss/_vars';
+
+
+.index {
+  background-image: url('../../assets/svgInline/bg.svg');
+  padding-bottom: 2rem;
+
+  &__section {
+    &:not(:last-child){
+      margin-bottom: 6rem;
+    }
+  }
+
+  @include media-up(sm) {
+    animation: bg-animation 100s linear infinite alternate;
+  }
+}
+
+@keyframes bg-animation {
+  0% {
+    background-position: 0 0
+  }
+
+  to {
+    background-position: 100% 0
+  }
+}

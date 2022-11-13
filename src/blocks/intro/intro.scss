@@ -1,0 +1,307 @@
+@import '~scss/utils/_grid';
+@import '~scss/_vars';
+
+
+.intro {
+  padding-top: 100px;
+
+  &__heading {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  &__text-column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5rem;
+    align-items: center;
+  }
+
+  &__post {
+    color: $blue;
+    margin-bottom: 2rem;
+  }
+
+  &__img {
+    height: 400px;
+    margin: 0 auto;
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    &:hover,
+    &:focus{
+      text-decoration: underline;
+    }
+  }
+
+  &__link-icon {
+    height: 40px;
+    width: 50px;
+    margin-right: 10px;
+  }
+
+  @include media-up(md) {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    padding-top: 100px;
+
+    &__text-column {
+      flex: 0 0 50%;
+      padding-top: 15%;
+    }
+
+    &__img-column {
+      padding: 15% 20px 0 20px;
+      flex: 1 1 0;
+    }
+  }
+}
+
+
+#man_eyeb {
+  transform: translateY(-9px);
+  animation: eyeb 5s linear infinite;
+}
+
+@keyframes eyeb {
+  0% {
+    transform: translateY(-10);
+  }
+
+  25% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(10);
+  }
+}
+
+#man_mouth {
+  transform: translateY(-5px);
+  animation: mouth 5s linear infinite;
+}
+
+@keyframes mouth {
+  0% {
+    transform: translateY(-10);
+  }
+
+  25% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(10);
+  }
+}
+
+#man_eyey2 {
+  transform: translateX(-2px);
+  animation: eyey2 4s linear infinite;
+}
+
+@keyframes eyey2 {
+  0% {
+    transform: translateX(-2);
+  }
+
+  25% {
+    transform: translateX(2px);
+  }
+
+  75% {
+    transform: translateX(-2px);
+  }
+
+  100% {
+    transform: translateX(2);
+  }
+}
+
+#man_notebook {
+  transform: translateY(-4px);
+  animation: notebook 6s linear infinite;
+}
+
+@keyframes notebook {
+  0% {
+    transform: translateY(-4);
+  }
+
+  25% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(4);
+  }
+}
+
+#man_legs {
+  transform: translateY(-9px);
+  animation: legs 6s infinite;
+}
+
+@keyframes legs {
+  0% {
+    transform: translateY(-10);
+  }
+
+  25% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(10);
+  }
+}
+
+#man_pe {
+  animation: pe 6s infinite;
+}
+
+@keyframes pe {
+  0% {
+    transform: rotateX(2deg);
+  }
+}
+
+#man_shirt {
+  transform: translateY(-9px);
+  animation: shirt 6s infinite;
+}
+
+@keyframes shirt {
+  0% {
+    transform: translateY(-10);
+  }
+
+  25% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(10);
+  }
+}
+
+#man_tshirt {
+  transform: translateY(-9px);
+  animation: tshirt 6s infinite;
+}
+
+@keyframes tshirt {
+  0% {
+    transform: translateY(-10);
+  }
+
+  25% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(10);
+  }
+}
+
+#man_head {
+  transform: translateY(-9px);
+  animation: head 6s infinite;
+}
+
+@keyframes head {
+  0% {
+    transform: translateY(-8);
+  }
+
+  25% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(8);
+  }
+}
+
+#man_ears {
+  animation: ears 6s linear infinite;
+}
+
+@keyframes ears {
+  0% {
+    transform: translateY(-10);
+  }
+
+  25% {
+    transform: translateY(0px);
+  }
+
+  75% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(10);
+  }
+}
+
+#man_brows {
+  animation: brows 6.1s linear infinite;
+}
+
+@keyframes brows {
+  0% {
+    transform: scale(0.96);
+  }
+
+  25% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.96);
+  }
+}
